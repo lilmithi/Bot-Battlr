@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import BotsPage from "./BotsPage";
+import YourBotArmy from "./YourBotArmy";
 
 const botTypeClasses = {
   Assault: "icon military",
@@ -9,13 +11,25 @@ const botTypeClasses = {
   Captain: "icon star",
 };
 
-function BotCard({ bot }) {
+function BotCard({ bot, handleAdd, releaseFromArmy }) {
+  // console.log("bot: ", bot);
+  // function handleArmy(bot) {
+  //   return [...army, bot];
+  //   // console.log("bot army: ", { army });
+  // }
+  // <YourBotArmy bot={army} />;
+  // const [bots, setBots] = useState([]);
+
+  // console.log("Botssss: ", bots);
+
   return (
     <div className="ui column">
       <div
         className="ui card"
         key={bot.id}
-        onClick={() => console.log("add code to connect event listener")}
+        onClick={() => {
+          handleAdd(bot);
+        }}
       >
         <div className="image">
           <img alt="oh no!" src={bot.avatar_url} />
@@ -47,9 +61,7 @@ function BotCard({ bot }) {
             <div className="ui center aligned segment basic">
               <button
                 className="ui mini red button"
-                onClick={() =>
-                  console.log("add code to connect event listener")
-                }
+                onClick={() => releaseFromArmy(bot)}
               >
                 x
               </button>
