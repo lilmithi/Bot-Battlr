@@ -12,16 +12,6 @@ const botTypeClasses = {
 };
 
 function BotCard({ bot, handleAdd, releaseFromArmy }) {
-  // console.log("bot: ", bot);
-  // function handleArmy(bot) {
-  //   return [...army, bot];
-  //   // console.log("bot army: ", { army });
-  // }
-  // <YourBotArmy bot={army} />;
-  // const [bots, setBots] = useState([]);
-
-  // console.log("Botssss: ", bots);
-
   return (
     <div className="ui column">
       <div

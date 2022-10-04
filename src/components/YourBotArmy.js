@@ -4,15 +4,7 @@ import BotCard from "./BotCard";
 
 function YourBotArmy({ army, handleRemove, releaseFromArmy }) {
   console.log("Army bot: ", army);
-  // console.log(id)
-
-  // const [army, setArmy] = useState([]);
-
-  //your bot army code here...
-
-  // function handleArmy() {
-  //   setArmy([...army,bot])
-  // }
+ 
   const renderArmy = army.map((bot, key) => (
     <BotCard
       key={key}
